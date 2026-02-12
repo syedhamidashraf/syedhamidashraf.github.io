@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <meta name="description" content="{{ renderDescription or globalConfig.summary }}">
+  <meta name="keywords" content="{{ renderKeywords or 'Data Engineer, Azure, SQL, PySpark, Portfolio' }}">
+  <meta name="author" content="{{ globalConfig.name }} - {{ globalConfig.title }}">
+  <meta name="generator" content="{{ eleventy.generator }}">
+
+  <title>{% block title %}{{ globalConfig.name }} | {{ globalConfig.title }}{% endblock %}</title>
+
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/site.webmanifest">
+  <meta name="theme-color" content="#0b2027">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/>
+  <link rel="stylesheet" type="text/css" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/assets/css/main.css">
+  
+  {% block head %}{% endblock %}
+</head>
+<body>
+
+  {% include "_components/eleventy.header.njk" %}
+
+  <main>
+    {% block content %}
+        {{ content | safe }}
+    {% endblock content %}
+  </main>
+
+  {% include "_components/eleventy.footer.njk" %} 
+
+  {% include "_scripts/eleventy.script.animations.njk" %}
+  {% include "_scripts/eleventy.script.navigation.njk" %}
+
+  {% renderScripts %}
+
+  {% block scripts %}{% endblock %}
+
+</body>
+</html>

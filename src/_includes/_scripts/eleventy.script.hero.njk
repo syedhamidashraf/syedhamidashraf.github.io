@@ -1,0 +1,17 @@
+{% script %}
+  const heroNodes = document.querySelectorAll('.hero__visual .node');
+  if (heroNodes.length) {
+    setInterval(() => {
+      heroNodes.forEach((node, i) => {
+        setTimeout(() => {
+          node.style.transform = 'scale(1.5)';
+          node.style.opacity = '0.8';
+          setTimeout(() => {
+            node.style.transform = 'scale(1)';
+            node.style.opacity = '1';
+          }, 300);
+        }, i * 200);
+      });
+    }, 5000);
+  }
+{% endscript %}

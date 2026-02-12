@@ -1,0 +1,7 @@
+src/assets/css/
+
+node_modules/
+
+README.md
+.gitignore
+.nvmrc

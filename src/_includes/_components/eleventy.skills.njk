@@ -1,0 +1,8 @@
+{% import "_components/macro/eleventy.macros.njk" as ui %}
+{% call ui.section("skills", "Technical Skills", dark=true) %}
+  <div class="skills-grid">
+    {% for category, items in globalConfig.skills %}
+      {{ ui.skillsCard(category, items) }}
+    {% endfor %}
+  </div>
+{% endcall %}

@@ -1,0 +1,28 @@
+{% import "_components/macro/eleventy.macros.njk" as ui %}
+
+{% call ui.section("about", "About Me") %}
+    <div style="max-width: 800px;">
+      <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
+        I'm a passionate Data Engineer with over 3.5 years of experience building robust, scalable data platforms on Microsoft Azure.
+      </p>
+      <p style="color: var(--color-text-muted); line-height: 1.8;">
+        {{ globalConfig.summary }}
+      </p>
+    </div>
+{% endcall %}
+
+{# <section class="section" id="about">
+  <div class="container">
+    <div class="section__header">
+      <h2>About Me</h2>
+    </div>
+    <div style="max-width: 800px;">
+      <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
+        I'm a passionate Data Engineer with over 3.5 years of experience building robust, scalable data platforms on Microsoft Azure.
+      </p>
+      <p style="margin-bottom: 1.5rem; color: var(--color-text-muted); line-height: 1.8;">
+        {{ globalConfig.summary }}
+      </p>
+    </div>
+  </div>
+</section> #}
