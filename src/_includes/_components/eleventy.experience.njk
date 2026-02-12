@@ -1,0 +1,9 @@
+{% import "_components/macro/eleventy.macros.njk" as ui %}
+
+{% call ui.section("experience", "Work History") %}
+  <div class="experience-timeline">
+    {% for job in globalConfig.experience %}
+      {{ ui.timelineItem(job) }}
+    {% endfor %}
+  </div>
+{% endcall %}

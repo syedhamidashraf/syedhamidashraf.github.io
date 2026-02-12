@@ -1,0 +1,12 @@
+{% import "_components/macro/eleventy.macros.njk" as ui %}
+
+{% call ui.section("projects", "GitHub Profile", subtitle="My open-source contributions") %}
+  
+  <div id="github-profile-card"></div>
+
+  <div id="github-repos" class="github-repos-grid"></div>
+
+{% endcall %}
+
+{% include "_scripts/eleventy.script.projects.njk" %}
+

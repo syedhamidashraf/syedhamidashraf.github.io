@@ -1,0 +1,79 @@
+{
+    "name": "Syed Hamid Ashraf",
+    "title": "Data Engineer",
+    "email": "syedhamidashraf@gmail.com",
+    "phone": "+91-9958648854",
+    "location": "India",
+    "social": {
+        "github_username": "syedhamidashraf",
+        "github": "https://github.com/syedhamidashraf",
+        "linkedin": "https://linkedin.com/in/syedhamidashraf",
+        "hackerrank": "https://hackerrank.com/syedhamidashraf"
+    },
+    "navigation": [
+        { "name": "About", "link": "#about" },
+        { "name": "Skills", "link": "#skills" },
+        { "name": "Experience", "link": "#experience" },
+        { "name": "Certifications", "link": "#certifications" },
+        { "name": "Projects", "link": "#projects" },
+        { "name": "Contact", "link": "#contact" }
+    ],
+    "summary": "Data Engineer with over 3.5 years of hands-on experience developing and supporting cloud-based data platforms. Skilled in SQL, Azure Data Factory, Azure Databricks (PySpark), and Azure Data Lake Storage Gen2, with practical experience in batch data pipelines, data validation, and on-prem to Azure migration initiatives.",
+    "skills": {
+        "querying": ["SQL", "Python (PySpark)"],
+        "platforms": [
+            "Azure Data Factory (ADF)",
+            "Azure Databricks",
+            "Azure Data Lake Storage Gen2"
+        ],
+        "orchestration": ["Azure Monitor", "Apache Airflow"],
+        "databases": ["MSSQL Server", "MongoDB"],
+        "processing": [
+            "ETL pipelines",
+            "Batch Processing",
+            "Incremental Loads",
+            "Data Validation"
+        ]
+    },
+    "certifications": [
+        {
+            "title": "Microsoft Certified: Azure Data Engineer Associate",
+            "code": "DP-203",
+            "year": "2023"
+        },
+        {
+            "title": "Microsoft Certified: Azure Fundamentals",
+            "code": "AZ-900",
+            "year": "2023"
+        },
+        {
+            "title": "Microsoft Certified: Azure Data Fundamentals",
+            "code": "DP-900",
+            "year": "2023"
+        }
+    ],
+    "experience": [
+        {
+            "role": "Data Engineer Analyst",
+            "company": "Accenture",
+            "period": "2021 - Present",
+            "highlights": [
+                "Designed, developed, and supported Azure-based batch data pipelines using Azure Data Factory and Azure Databricks, processing 20+ GB/day of data",
+                "Implemented data ingestion pipelines from MSSQL Server into ADLS Gen2, enabling 100% automated daily and weekly batch processing",
+                "Optimized PySpark transformations using efficient joins, partitioning, and selective caching, reducing ETL execution time by 25–30%",
+                "Contributed to workflow orchestration using Apache Airflow, maintaining ~97% pipeline uptime",
+                "Assisted in compute cost optimization by analyzing Databricks cluster usage patterns, reducing spend by ~15–20%"
+            ]
+        }
+    ],
+    "achievements": [
+        "Received Accenture Ace Award for outstanding performance and contributions",
+        "Selected as a Core Member of TEDx Hyderabad; coordinated a 10-member team to support operations for 16 speakers and 500+ attendees"
+    ],
+    "education": {
+        "degree": "Master of Computer Applications",
+        "university": "Jamia Millia Islamia",
+        "period": "2018 - 2021",
+        "cgpa": "8.74"
+    }
+}

@@ -1,0 +1,11 @@
+{% import "_components/macro/eleventy.macros.njk" as ui %}
+
+{% call ui.section("contact", "Let's Connect", centered=true) %}
+    <p>Interested in collaborating? Feel free to reach out!</p>
+    <div class="contact__links">
+      <a href="mailto:{{ globalConfig.email }}"><span>📧</span> Email</a>
+      <a href="{{ globalConfig.social.linkedin }}"><span>💼</span> LinkedIn</a>
+      <a href="{{ globalConfig.social.github }}"><span>🔗</span> GitHub</a>
+    </div>
+{% endcall %}
+

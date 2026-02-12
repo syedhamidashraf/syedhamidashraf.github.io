@@ -1,0 +1,27 @@
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 2rem;
+$space-lg: 4rem;
+$space-xl: 6rem;
+
+$font-display: "Orbitron", "Courier New", monospace;
+$font-body: "JetBrains Mono", "Consolas", monospace;
+$font-accent: "Space Mono", monospace;
+
+$transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+:root {
+    --space-xs: #{$space-xs};
+    --space-sm: #{$space-sm};
+    --space-md: #{$space-md};
+    --space-lg: #{$space-lg};
+    --space-xl: #{$space-xl};
+    --font-display: #{$font-display};
+    --font-body: #{$font-body};
+    --font-accent: #{$font-accent};
+    --transition-fast: #{$transition-fast};
+    --transition-normal: #{$transition-normal};
+    --transition-slow: #{$transition-slow};
+}

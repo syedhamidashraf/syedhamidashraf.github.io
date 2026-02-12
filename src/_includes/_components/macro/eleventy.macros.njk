@@ -1,0 +1,41 @@
+{% macro section(id, title, subtitle=null, dark=false, centered=false) %}
+<section class="section {{ 'section--dark' if dark }} {{ 'contact' if id == 'contact' }}" id="{{ id }}">
+  <div class="container">
+    <div class="section__header {{ 'text-center' if centered }}">
+      <h2>{{ title }}</h2>
+      {% if subtitle %}<p class="section__subtitle">{{ subtitle }}</p>{% endif %}
+    </div>
+    <div class="{{ 'text-center' if centered }}">
+      {{ caller() }}
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro skillsCard(category, items) %}
+<div class="skills-grid__category">
+  <h3 style="text-transform: capitalize;">{{ category | replace("_", " ") }}</h3>
+  <ul>
+    {% for skill in items %}<li>{{ skill }}</li>{% endfor %}
+  </ul>
+</div>
+{% endmacro %}
+
+{% macro timelineItem(job) %}
+<div class="experience-timeline__item">
+  <h3 class="role">{{ job.role }}</h3>
+  <div class="company">{{ job.company }}</div>
+  <div class="period">{{ job.period }}</div>
+  <ul class="highlights">
+    {% for h in job.highlights %}<li>{{ h }}</li>{% endfor %}
+  </ul>
+</div>
+{% endmacro %}
+
+{% macro certCard(cert) %}
+<div class="cert-grid__item">
+  <div class="cert-code">{{ cert.code }}</div>
+  <h3 class="cert-title">{{ cert.title }}</h3>
+  <div class="cert-year">{{ cert.year }}</div>
+</div>
+{% endmacro %}

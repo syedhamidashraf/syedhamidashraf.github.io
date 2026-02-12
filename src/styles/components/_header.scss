@@ -1,0 +1,124 @@
+@use "../abstracts" as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: var(--space-sm) 0;
+    background: rgba(13, 17, 23, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 1000;
+    transition: all 0.3s ease;
+
+    &.scrolled {
+        padding: var(--space-xs) 0;
+        background: rgba(13, 17, 23, 0.95);
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-secondary);
+            text-decoration: none;
+            font-weight: 700;
+            &::before {
+                content: "> ";
+                color: var(--color-accent);
+                animation: blink 1.5s infinite;
+            }
+        }
+
+        &__toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            @media (max-width: 768px) {
+                display: block;
+            }
+            .hamburger {
+                display: block;
+                width: 25px;
+                height: 2px;
+                background: var(--color-secondary);
+                position: relative;
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 25px;
+                    height: 2px;
+                    background: var(--color-secondary);
+                    transition: 0.3s;
+                }
+                &::before {
+                    top: -8px;
+                }
+                &::after {
+                    bottom: -8px;
+                }
+            }
+            &.active .hamburger {
+                background: transparent;
+                &::before {
+                    transform: rotate(45deg) translate(5px, 6px);
+                }
+                &::after {
+                    transform: rotate(-45deg) translate(5px, -6px);
+                }
+            }
+        }
+
+        &__links {
+            display: flex;
+            gap: var(--space-md);
+            list-style: none;
+            @media (max-width: 768px) {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background: var(--color-bg-elevated);
+                padding: var(--space-md);
+                transform: translateY(-150%);
+                transition: 0.4s;
+                z-index: -1;
+                &.active {
+                    transform: translateY(0);
+                }
+            }
+            a {
+                color: var(--color-text);
+                text-decoration: none;
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -4px;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background: var(--color-secondary);
+                    transition: 0.3s;
+                }
+                &:hover::after,
+                &.active::after {
+                    width: 100%;
+                }
+                &.active {
+                    color: var(--color-secondary);
+                }
+            }
+        }
+    }
+}

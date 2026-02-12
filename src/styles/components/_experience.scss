@@ -1,0 +1,75 @@
+@use "../abstracts" as *;
+
+.experience-timeline {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+            180deg,
+            var(--color-secondary),
+            var(--color-accent)
+        );
+    }
+
+    &__item {
+        position: relative;
+        padding-left: var(--space-lg);
+        margin-bottom: var(--space-lg);
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            background: var(--color-secondary);
+            border: 3px solid var(--color-bg);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px var(--color-bg-elevated);
+        }
+
+        .role {
+            font-size: 1.5rem;
+            color: var(--color-text);
+            margin-bottom: var(--space-xs);
+        }
+
+        .company {
+            font-family: var(--font-accent);
+            color: var(--color-secondary);
+            font-size: 1.1rem;
+            margin-bottom: var(--space-xs);
+        }
+
+        .period {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            margin-bottom: var(--space-sm);
+        }
+
+        .highlights {
+            list-style: none;
+
+            li {
+                padding: var(--space-xs) 0;
+                padding-left: 24px;
+                position: relative;
+                color: var(--color-text-muted);
+
+                &::before {
+                    content: "→";
+                    position: absolute;
+                    left: 0;
+                    color: var(--color-accent);
+                }
+            }
+        }
+    }
+}

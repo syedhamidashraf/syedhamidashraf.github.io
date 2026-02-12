@@ -1,0 +1,57 @@
+@use "../abstracts" as *;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0, 212, 255, 0.03) 1px,
+                transparent 1px
+            ),
+            linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
+        pointer-events: none;
+        z-index: 0;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    position: relative;
+    z-index: 1;
+}
+
+.text-center {
+    text-align: center;
+}
+.mt-lg {
+    margin-top: var(--space-lg);
+}
+.mb-lg {
+    margin-bottom: var(--space-lg);
+}

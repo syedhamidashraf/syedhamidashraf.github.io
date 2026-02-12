@@ -1,0 +1,9 @@
+{% import "_components/macro/eleventy.macros.njk" as ui %}
+
+{% call ui.section("certifications", "Certifications", dark=true) %}
+  <div class="cert-grid">
+    {% for cert in globalConfig.certifications %}
+      {{ ui.certCard(cert) }}
+    {% endfor %}
+  </div>
+{% endcall %}
